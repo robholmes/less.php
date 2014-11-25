@@ -110,8 +110,8 @@ class Less_Tree_Import extends Less_Tree{
 			return null;
 		}
 
-		//remove query string and fragment
-		return preg_replace('/[\?#][^\?]*$/','',$path);
+		//remove fragment from url
+		return preg_replace('/[#][^\?]*$/','',$path);
 	}
 
     public function compileForImport( $env ){
